@@ -48,12 +48,13 @@ class LearningAgent(Agent):
         #self.epsilon -= 0.05
 
         # sim_improved-learning
-        a = 0.517806 # 0 < a < 1
-        self.epsilon -= pow(a, self.n_test)
+        #a = 0.5142448 # 0 < a < 1
+        #self.epsilon -= pow(a, self.n_test)
+        self.epsilon -= pow(self.alpha, self.n_test)
         
         if testing:
-            self.epsilon=0
-            alpha=0
+            self.epsilon = 0
+            self.alpha = 0
 
         return None
 
@@ -201,11 +202,13 @@ class LearningAgent(Agent):
         #self.Q[self.state][action] = (1.0 - self.alpha) * self.Q[self.state][action] + self.alpha * reward
 
         if self.learning:
-
+            oldv = self.Q[state][action]
+            self.Q[state][action] = oldv + self.alpha * (reward - oldv)
+            """
             oldv = self.Q.get((state, action), None)
             if oldv is None:
-                #self.Q[(state, action)] = reward
-                self.Q[state][action] = reward
+                self.action_dict = {None:0.0, 'forward':0.0, 'left':0.0, 'right':0.0}
+                self.Q[state] = self.action_dict
             else:
                 #self.Q[(state, action)] = oldv + self.alpha * (reward - oldv)
                 self.Q[state][action] = oldv + self.alpha * (reward - oldv)
@@ -213,7 +216,7 @@ class LearningAgent(Agent):
             #print '+++++++++++++++++++'
             #print 'self.Q : ', self.Q
             #print '+++++++++++++++++++'
-            
+            """
         else:
             pass
     
@@ -261,7 +264,7 @@ def run():
     #    * alpha   - continuous value for the learning rate, default is 0.5
     #agent = env.create_agent(LearningAgent)
     #agent = env.create_agent(LearningAgent, learning = True)
-    agent = env.create_agent(LearningAgent, learning = True, epsilon = 0.97, alpha = 0.99) #A+/A+
+    agent = env.create_agent(LearningAgent, learning = True, epsilon = 0.97, alpha = 0.505) #A+/A+
     
     ##############
     # Follow the driving agent
