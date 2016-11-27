@@ -1,5 +1,10 @@
 # Project 2: Supervised Learning
 ## Building a Student Intervention System
+- Investigated 48 factors that affect students’ performance in high school.
+- Trained and tested 3 supervised machine learning models (DecisionTreeClassifier, SVM, GaussianNB) to predict how likely a student was to pass.
+- Selected the best model based on relative accuracy and efficiency (Training score : 86% | Test score : 80 %, for the SVM algorithm here).
+- Optimized the chosen best model applying GridSearchCV (Training score : 97% | Test score : 83 %) and predicted the students’ success or failure with it. 
+
 
 ### Install
 
