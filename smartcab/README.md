@@ -1,6 +1,11 @@
 # Machine Learning Engineer Nanodegree
 # Reinforcement Learning
 ## Project: Train a Smartcab How to Drive
+-	Applied reinforcement learning to build a simulated vehicle navigation agent which runs safely and reliably.
+-	Defined agent states based on US traffic laws at an intersection.
+-	Defined a Q-learning algorithm from these states to help the Smartcab learn the US traffic laws.
+-	Improved the Q-learning algorithm to reach the highest Safety and Reliability rating for the Smartcab (A+/A+).
+
 
 ### Install
 
