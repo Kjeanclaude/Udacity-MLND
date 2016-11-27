@@ -1,6 +1,9 @@
 # Project 1: Model Evaluation & Validation
 ## Predicting Boston Housing Prices
-
+- Built a machine learning model to predict the value of a given house in the Boston real estate market.
+- Optimized the model applying GridSearchCV on a Decision Tree Regressor Classifier (Performance = 92.3% and 'max_depth' = 4).
+- Identified the best price that a client can sell their house utilizing the optimized model.
+	
 ### Install
 
 This project requires **Python 2.7** and the following Python libraries installed:
