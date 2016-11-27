@@ -1,5 +1,9 @@
 # Project 3: Unsupervised Learning
 ## Creating Customer Segments
+- Reviewed unstructured data from a wholesale distributor to understand the patterns and natural categories from the data.
+- Applied KMeans algorithm predictions on sample and reduced data to create 2 clusters or customers segments.
+- Determined the wholesale distributor customers’ most appropriate delivery service using 'customer segment’ as a new feature. 
+
 
 ### Install
 
