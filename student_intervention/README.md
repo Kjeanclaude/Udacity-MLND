@@ -66,3 +66,4 @@ The dataset used in this project is included as `student-data.csv`. This dataset
 - `health` : current health status (numeric: from 1 - very bad to 5 - very good)
 - `absences` : number of school absences (numeric: from 0 to 93)
 - `passed` : did the student pass the final exam (binary: yes or no)
+
